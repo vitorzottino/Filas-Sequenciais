@@ -30,7 +30,7 @@ public class FilaInt {
 	public void enqueue(int elem) {
 
 		if (isFull())
-			System.out.print("Fila Cheia");
+			System.out.println("Fila Cheia");
 
 		else {
 			dados[fim] = elem;
