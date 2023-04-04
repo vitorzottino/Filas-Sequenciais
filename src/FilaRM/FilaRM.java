@@ -25,7 +25,7 @@ public class FilaRM {
 					System.out.println("Encerrado");
 					opcao = 3;
 				} else
-					System.out.println("Nao foi possivel encerrar, fila nao esta vaizia");
+					System.out.println("Nao foi possivel encerrar, alunos aguardando");
 				break;
 
 			case 1:
@@ -34,7 +34,10 @@ public class FilaRM {
 				filaAlunos.enqueue(rm);
 				break;
 			case 2:
+				if(!filaAlunos.isEmpty())
 				System.out.println("Aluno retirado da fila: " + filaAlunos.dequeue());
+				else
+					System.out.println("Fila Vazia, impossivel retirar");
 				break;
 			default:
 				System.out.println("Opcao Invalida\n");
